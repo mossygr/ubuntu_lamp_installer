@@ -21,7 +21,7 @@ else
 fi
 
 ## mysql installing 
-echo -e "######\e[36mInstalling mysql.....####\e[0m"
+echo -e "######\e[3ß6mInstalling mysql.....####\e[0m"
 apt-get -y install mysql-server >> log.txt
 mysql -V &>/dev/null
 
@@ -36,8 +36,8 @@ fi
 
 ##installing php7
 echo -e "######\e[36mInstalling php.....####\e[0m"
-add-apt-repository -y ppa:ondrej/php 
-apt-get install php >> log.txt
+#add-apt-repository -y ppa:ondrej/php 
+apt-get -y install php
 php -v &>/dev/null
 
 if [ $? -eq 0 ]; then
