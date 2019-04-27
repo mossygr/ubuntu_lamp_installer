@@ -7,7 +7,7 @@ apt -y update && apt -y upgrade
 
 ###apache insatlling 
 echo -e "######\e[36mInstalling apache.....####\e[0m"
-apt -y install apache2 >> log.txt &>/dev/null
+apt -y install apache2 &>/dev/null >> log.txt
 apache2 -v  &>/dev/null
 
 if [ $? -eq 0 ]; then #succes
@@ -20,8 +20,8 @@ fi
 
 ## mysql installing 
 echo -e "######\e[36mInstalling mysql.....####\e[0m"
-apt -y install mysql-server >> log.txt &>/dev/null
-mysql -v &>/dev/null
+apt -y install mysql-server &>/dev/null >> log.txt
+mysql -V &>/dev/null
 
 if [ $? -eq 0 ]; then
     echo -e "\e[34mMysql Installed Successfully\e[0m"
@@ -35,7 +35,7 @@ fi
 ##installing php7
 echo -e "######\e[36mInstalling php.....####\e[0m"
 add-apt-repository -y ppa:ondrej/php
-apt -y install php >> log.txt &>/dev/null
+apt -y install php &>/dev/null >> log.txt
 php -v &>/dev/null
 
 if [ $? -eq 0 ]; then
