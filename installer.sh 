@@ -36,8 +36,8 @@ fi
 
 ##installing php7
 echo -e "######\e[36mInstalling php.....####\e[0m"
-add-apt-repository -y ppa:ondrej/php &>/dev/null
-apt -y install php &>/dev/null >> log.txt
+add-apt-repository -y ppa:ondrej/php 
+apt -y install php >> log.txt
 php -v &>/dev/null
 
 if [ $? -eq 0 ]; then
