@@ -4,7 +4,7 @@
 ### check if the program is run as root
 
 apt-get -y update && apt-get -y upgrade
-apt-get -y install apt-get-utils software-properties-common
+apt-get -y install apt-utils software-properties-common
 
 
 ###apache installing 
@@ -36,7 +36,7 @@ fi
 
 ##installing php7
 echo -e "######\e[36mInstalling php.....####\e[0m"
-add-apt-get-repository -y ppa:ondrej/php 
+add-apt-repository -y ppa:ondrej/php 
 apt-get install php >> log.txt
 php -v &>/dev/null
 
