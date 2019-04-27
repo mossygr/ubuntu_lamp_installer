@@ -3,7 +3,8 @@
 
 ### check if the program is run as root
 
-apt -y update && apt -y upgrade && software-properties-common
+apt -y update && apt -y upgrade
+apt install software-properties-common
 
 
 ###apache insatlling 
