@@ -3,11 +3,11 @@
 
 ### check if the program is run as root
 
-sudo apt update && sudo apt upgrade
+apt update && sudo apt upgrade
 
 ###apache insatlling 
 echo "Installing apache"
-sudo apt install apache2 > /dev/null 
+apt install apache2 > /dev/null 
 apache2 -v  > log.txt &>/dev/null
 
 if [ $? -eq 0 ]; then #succes
@@ -19,7 +19,9 @@ fi
 
 ## mysql installing 
 echo "installing mysql"
-sudo apt-get install mysql-server
+apt-get install mysql-server
+
 
 ##installing php7
-sudo apt-get install php7.0 php7.0-mysql libapache2-mod-php7.0 php7.0-cli php7.0-cgi php7.0-gd
+add-apt-repository -y ppa:ondrej/php
+apt-get install php
