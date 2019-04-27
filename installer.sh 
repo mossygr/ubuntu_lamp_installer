@@ -4,25 +4,25 @@
 ### check if the program is run as root
 
 apt -y update && apt -y upgrade
-apt install software-properties-common
+apt -y install software-properties-common
 
 
-###apache insatlling 
+###apache installing 
 echo -e "######\e[36mInstalling apache.....####\e[0m"
 apt -y install apache2 &>/dev/null >> log.txt
 apache2 -v  &>/dev/null
 
-if [ $? -eq 0 ]; then #succes
+if [ $? -eq 0 ]; then 
     echo -e "\e[34mApache installed succefully\e[0m"
     sleep 1;
 else 
     echo -e "\e[31mERROR: Failed to install apache check\e[0m" #logs
-    exit 1 ## stop script 
+    exit 1 
 fi
 
 ## mysql installing 
 echo -e "######\e[36mInstalling mysql.....####\e[0m"
-apt -y install mysql-server &>/dev/null >> log.txt
+apt -y install mysql-server >> log.txt
 mysql -V &>/dev/null
 
 if [ $? -eq 0 ]; then
@@ -36,7 +36,7 @@ fi
 
 ##installing php7
 echo -e "######\e[36mInstalling php.....####\e[0m"
-add-apt-repository -y ppa:ondrej/php
+add-apt-repository -y ppa:ondrej/php &>/dev/null
 apt -y install php &>/dev/null >> log.txt
 php -v &>/dev/null
 
