@@ -3,25 +3,46 @@
 
 ### check if the program is run as root
 
-apt update && sudo apt upgrade
+apt -y update && apt -y upgrade
 
 ###apache insatlling 
-echo "Installing apache"
-apt install apache2 > /dev/null 
-apache2 -v  > log.txt &>/dev/null
+echo -e "######\e[36mInstalling apache.....####\e[0m"
+apt -y install apache2 >> log.txt &>/dev/null
+apache2 -v  &>/dev/null
 
 if [ $? -eq 0 ]; then #succes
-    echo "apache installed succefully"
+    echo -e "\e[34mApache installed succefully\e[0m"
+    sleep 1;
 else 
-    echo ERROR: Failed to install apache check #logs
+    echo -e "\e[31mERROR: Failed to install apache check\e[0m" #logs
     exit 1 ## stop script 
 fi
 
 ## mysql installing 
-echo "installing mysql"
-apt-get install mysql-server
+echo -e "######\e[36mInstalling mysql.....####\e[0m"
+apt -y install mysql-server >> log.txt &>/dev/null
+mysql -v &>/dev/null
+
+if [ $? -eq 0 ]; then
+    echo -e "\e[34mMysql Installed Successfully\e[0m"
+    sleep 1;
+else
+    echo -e "\e[31mERROR: Failed to install mysql check\e[0m"
+    exit 1
+fi
 
 
 ##installing php7
+echo -e "######\e[36mInstalling php.....####\e[0m"
 add-apt-repository -y ppa:ondrej/php
-apt-get install php
+apt -y install php >> log.txt &>/dev/null
+php -v &>/dev/null
+
+if [ $? -eq 0 ]; then
+    echo -e "\e[34mPHP Installed Successfully\e[0m"
+    sleep 1;
+else
+    echo -e "\e[31mERROR: Failed to install mysql check\e[0m"
+    exit 1
+fi
+
