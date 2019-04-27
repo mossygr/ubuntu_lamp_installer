@@ -3,7 +3,8 @@
 
 ### check if the program is run as root
 
-apt -y update && apt -y upgrade
+apt -y update && apt -y upgrade && software-properties-common
+
 
 ###apache insatlling 
 echo -e "######\e[36mInstalling apache.....####\e[0m"
