@@ -14,7 +14,7 @@ apache2 -v  &>/dev/null
 
 if [ $? -eq 0 ]; then 
     echo -e "\e[34mApache installed succefully\e[0m"
-    sleep 1;
+    sleep 2;
 else 
     echo -e "\e[31mERROR: Failed to install apache check\e[0m" #logs
     exit 1 
@@ -22,12 +22,12 @@ fi
 
 ## mysql installing 
 echo -e "######\e[3ß6mInstalling mysql.....####\e[0m"
-apt-get -y install mysql-server
+apt-get -y install mysql-server &>/dev/null >> log.txt
 mysql -V &>/dev/null
 
 if [ $? -eq 0 ]; then
     echo -e "\e[34mMysql Installed Successfully\e[0m"
-    sleep 1;
+    sleep 2;
 else
     echo -e "\e[31mERROR: Failed to install mysql check\e[0m"
     exit 1
@@ -35,6 +35,8 @@ fi
 
 
 ##installing php7
+echo -e 'during the installation you will be promped to enter data'
+sleep 3
 echo -e "######\e[36mInstalling php.....####\e[0m"
 #add-apt-repository -y ppa:ondrej/php 
 apt-get -y install php
