@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 
 ### check if the program is run as root
