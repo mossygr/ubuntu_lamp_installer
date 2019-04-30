@@ -1,2 +1,6 @@
-# ubuntu_lamp_installer
-shell script to install lamp on ubuntu 
+```shell
+git clone https://github.com/mossygr/ubuntu_lamp_installer 
+cd ubuntu_lamp_installer
+chmod +x installer.sh
+./installer
+```
