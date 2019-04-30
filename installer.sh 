@@ -59,7 +59,7 @@ if [ $? -eq 0 ]; then
     echo -e "\e[34mApache  running \e[0m"
     sleep 1;
 else
-    echo -e "\e[31mERROR: Failed to start Apache check\e[0m"
+    echo -e "\e[31mERROR: Failed to start Apache check logs\e[0m"
     exit 1
 fi
 
@@ -67,10 +67,10 @@ fi
 service mysql restart &>/dev/null >> log.txt
 
 if [ $? -eq 0 ]; then
-    echo -e "\e[34m mysql running \e[0m"
+    echo -e "\e[34mmysql running \e[0m"
     sleep 1;
 else
-    echo -e "\e[31mERROR: Failed to start mysql check\e[0m"
+    echo -e "\e[31mERROR: Failed to start mysql check logs\e[0m"
     exit 1
 fi
 
