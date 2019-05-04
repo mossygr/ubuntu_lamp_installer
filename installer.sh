@@ -39,7 +39,8 @@ echo -e 'during the installation you will be promped to enter data'
 sleep 3
 echo -e "\e[36mInstalling php.....\e[0m"
 #add-apt-repository -y ppa:ondrej/php 
-apt-get -y install php
+apt-get -y install php php-mysql
+
 php -v &>/dev/null
 
 if [ $? -eq 0 ]; then
