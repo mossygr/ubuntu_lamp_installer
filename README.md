@@ -7,3 +7,9 @@ cd ubuntu_lamp_installer
 chmod +x installer.sh
 ./installer
 ```
+
+
+https://sysfiddler.com/mysql-error-1819-hy000-your-password-does-not-satisfy-the-current-policy-requirements/
+
+
+https://www.sqlshack.com/how-to-connect-to-a-remote-mysql-server-using-ssh/
