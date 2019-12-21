@@ -21,3 +21,7 @@ docker run -p 80:80 -it ubuntu /bin/bash //open port 80 to port 80
 
 apt update && apt install vim git && git clone https://github.com/mossygr/ubuntu_lamp_installer && cd ubuntu_lamp_installer && chmod +x install* && ./inst*
 
+
+# To run wordpress instance just follow this 
+- https://upcloud.com/community/tutorials/wordpress-with-docker/
+
