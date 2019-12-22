@@ -25,3 +25,4 @@ apt update && apt install vim git && git clone https://github.com/mossygr/ubuntu
 # To run wordpress instance just follow this 
 - https://upcloud.com/community/tutorials/wordpress-with-docker/
 
+https://devops.ionos.com/tutorials/use-ssh-keys-with-putty-on-windows/ //connect with ssh via putty from windows
